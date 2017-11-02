@@ -43,15 +43,19 @@
 		<!-- Page Content -->
 		<div class="content">
 			<c:if test="${userClickHome==true}">
-				<%@include file="./shared/home.jsp"%>
+				<%@include file="./home.jsp"%>
 			</c:if>
 
 			<c:if test="${userClickAbout==true}">
-				<%@include file="./shared/about.jsp"%>
+				<%@include file="./about.jsp"%>
 			</c:if>
 
 			<c:if test="${userClickContact==true}">
-				<%@include file="./shared/contact.jsp"%>
+				<%@include file="./contact.jsp"%>
+			</c:if>
+			
+				<c:if test="${userClickAllProducts==true or userClickCategoryProducts==true}">
+				<%@include file="listProducts.jsp"%>
 			</c:if>
 		</div>
 		<!-- /.container -->
